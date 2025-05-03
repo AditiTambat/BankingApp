@@ -15,7 +15,7 @@ public class BankAccountApp {
 			System.out.println("3. Choose for withdraw money");
 			System.out.println("4. Choose for show balance");
 			System.out.println("5. Choose for show account deatils");
-			System.out.println("10. Exit.");
+			System.out.println("6. Exit.");
 			System.out.println("Choose your option: ");
 			opt = sc.nextInt();
 			
@@ -32,8 +32,9 @@ public class BankAccountApp {
 					break;
 				case 5 : showDetails();
 					break;
+				case 6 : break;
 			}
-		}while(opt != 10);
+		}while(opt != 6);
 	}
 
 	private static void showDetails() {
@@ -61,7 +62,8 @@ public class BankAccountApp {
 	    }
 	}
 
-
+// minimum balance add 10000
+//	sorting according to branch address
 	private static void showBalance() {
 		System.out.println("Enter Account No.: ");
 		int accno = sc.nextInt();
@@ -149,9 +151,11 @@ public class BankAccountApp {
 		sc.nextLine();
 		System.out.println("Enter branch: ");
 		String branch = sc.nextLine();
+		System.out.println("Enter Phone: ");
+		String phone = sc.nextLine();
 		
 		
-		b1 = new BankAccount(accno, name, adds,balance, branch);
+		b1 = new BankAccount(accno, name, adds,balance, branch, phone);
 		banklist.add(b1);
 		System.out.println("Account created successfully!!");
 		System.out.println();
