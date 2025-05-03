@@ -4,8 +4,16 @@ public class BankAccount {
 	private String name;
 	private String address;
 	private float balance;
+	private String phone;
 	private String branch;
 	
+	
+	public String getPhone() {
+		return phone;
+	}
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
 	public int getAccno() {
 		return accno;
 	}
@@ -36,13 +44,14 @@ public class BankAccount {
 	public void setBranch(String branch) {
 		this.branch = branch;
 	}
-	public BankAccount(int accno, String name, String address, float balance, String branch) {
+	public BankAccount(int accno, String name, String address, float balance, String branch, String phone) {
 		super();
 		this.accno = accno;
 		this.name = name;
 		this.address = address;
 		this.balance = balance;
 		this.branch = branch;
+		this.phone = phone;
 	}
 	public BankAccount() {
 		super();
@@ -67,7 +76,7 @@ public class BankAccount {
 	
 	public void showDetails() {
 		if(accno == accno) {
-			System.out.println("Account No: "+accno+"\t\t"+"Account holder name: "+name+"\t"+"Address: "+address+"\t"+"Account balance: "+balance+"\t\t"+"Branch Name: "+branch);
+			System.out.println("Account No: "+accno+"\t\t"+"Account holder name: "+name+"\t"+"Address: "+address+"\t"+"Account balance: "+balance+"\t\t"+"Branch Name: "+branch+"\t\t"+"Phone : "+phone);
 		}else {
 			throw new InvalidAccountException();
 		}
